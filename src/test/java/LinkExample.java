@@ -1,9 +1,12 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class LinkExample {
 
@@ -47,7 +50,11 @@ public class LinkExample {
 
         //04- Duplicate Link
         homelink.click();
+
         //05- Count page Link
+        List<WebElement> countfullpageLinks =  driver.findElements(By.tagName("a"));
+        int pageLinkCount = countfullpageLinks.size();
+        System.out.println("Count of full links : " + pageLinkCount);
         //06- count layout links
 
     }
