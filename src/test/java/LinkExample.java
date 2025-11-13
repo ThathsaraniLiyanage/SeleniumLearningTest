@@ -48,14 +48,21 @@ public class LinkExample {
         }
         driver.navigate().back();
 
+
         //04- Duplicate Link
         homelink.click();
+
 
         //05- Count page Link
         List<WebElement> countfullpageLinks =  driver.findElements(By.tagName("a"));
         int pageLinkCount = countfullpageLinks.size();
         System.out.println("Count of full links : " + pageLinkCount);
+
+
         //06- count layout links
+        WebElement layoutElement = driver.findElement(By.className("layout-main-content"));
+        List<WebElement> countOfLayoutLinks = layoutElement.findElements(By.tagName("a"));
+        System.out.println("Count of layout links : " + countOfLayoutLinks.size());
 
     }
 
