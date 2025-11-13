@@ -16,7 +16,7 @@ public class LinkExample {
     public void openLinkTestPage(){
 
         //To open the browser
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.leafground.com/link.xhtml");
 
@@ -50,8 +50,9 @@ public class LinkExample {
 
 
         //04- Duplicate Link
-        homelink.click();
-
+        WebElement homelink1 = driver.findElement(By.linkText("Go to Dashboard"));
+        homelink1.click();
+        driver.navigate().back();
 
         //05- Count page Link
         List<WebElement> countfullpageLinks =  driver.findElements(By.tagName("a"));
