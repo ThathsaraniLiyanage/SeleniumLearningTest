@@ -46,7 +46,7 @@ public class LinkExample {
         driver.navigate().back();
 
         //04- Duplicate Link
-        homelink
+        homelink.click();
         //05- Count page Link
         //06- count layout links
 
