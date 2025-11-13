@@ -43,8 +43,10 @@ public class LinkExample {
         }else{
             System.out.println("This link is not broken");
         }
+        driver.navigate().back();
 
         //04- Duplicate Link
+        homelink
         //05- Count page Link
         //06- count layout links
 
