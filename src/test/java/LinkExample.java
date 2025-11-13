@@ -34,7 +34,16 @@ public class LinkExample {
         System.out.println("This link is going to : " + path);
 
         //03- Am I broken link?
-        
+        WebElement brokenLink = driver.findElement(By.linkText("Broken?"));
+        brokenLink.click();
+
+        String title = driver.getTitle();
+        if (title.contains("404")){
+            System.out.println("This link is broken");
+        }else{
+            System.out.println("This link is not broken");
+        }
+
         //04- Duplicate Link
         //05- Count page Link
         //06- count layout links
